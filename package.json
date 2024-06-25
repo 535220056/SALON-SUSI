@@ -1,0 +1,19 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "watch": "mix watch",
+        "prod": "vite build",
+        "hot": "mix watch --hot"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^1.1.2",
+        "browser-sync": "^3.0.2",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "laravel-mix": "^6.0.49"
+    }
+}
