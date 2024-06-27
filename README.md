@@ -17,5 +17,5 @@ Selamat datang di situs web Salon Susi
 
 
 ## Tautan Video Demo Program
-Tautan: [Demo Program(Youtube)()]
+Tautan: [[Demo Program](https://youtu.be/6FQ1IlRE4js)]
 Tautan: [Presentasi(Youtube)()]
