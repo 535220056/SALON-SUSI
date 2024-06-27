@@ -22,11 +22,10 @@ class Reservation extends Model
     ];
 
     protected $dates = [
-        'res_date'
+        'res_date' // Menggunakan Carbon untuk meng-cast kolom tanggal reservasi
     ];
 
-
-
+    // Definisikan relasi untuk tabel
     public function table()
     {
         return $this->belongsTo(Table::class);

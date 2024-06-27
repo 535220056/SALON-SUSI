@@ -24,20 +24,25 @@
             class="flex flex-col flex-shrink-0 w-full text-gray-700 bg-green-200 md:w-64 dark:text-gray-200 dark:bg-green-700"
             x-data="{ open: false }">
             <div class="flex flex-row items-center justify-between flex-shrink-0 px-8 py-4">
+                <!-- Nama salon -->
                 <a href="#"
                     class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">Susi's Salon
                     </a>
+                <!-- Tombol untuk menampilkan menu navigasi pada tampilan mobile -->
                 <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                     <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <!-- Ikon menu ketika menu ditutup -->
                         <path x-show="!open" fill-rule="evenodd"
                             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
                             clip-rule="evenodd"></path>
+                        <!-- Ikon menu ketika menu dibuka -->
                         <path x-show="open" fill-rule="evenodd"
                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
             </div>
+            <!-- Menu navigasi -->
             <nav :class="{'block': open, 'hidden': !open}"
                 class="flex-grow px-4 pb-4 md:block md:pb-0 md:overflow-y-auto">
                 <x-admin-nav-link :href="route('admin.categories.index')"
@@ -56,6 +61,7 @@
                     {{ __('Appointment') }}
                 </x-admin-nav-link>
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <!-- Tombol untuk menampilkan menu dropdown pengguna -->
                     <button @click="open = !open"
                         class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:block hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                         <span>{{ Auth::user()->name }}</span>
@@ -66,6 +72,7 @@
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
+                    <!-- Menu dropdown pengguna -->
                     <div x-show="open" x-transition:enter="transition ease-out duration-100"
                         x-transition:enter-start="transform opacity-0 scale-95"
                         x-transition:enter-end="transform opacity-100 scale-100"
@@ -88,8 +95,10 @@
                 </div>
             </nav>
         </div>
+        <!-- Main content -->
         <main class="m-2 p-8 w-full">
             <div>
+                <!-- Menampilkan pesan notifikasi dari sesi -->
                 @if (session()->has('danger'))
                     <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
                         role="alert">
@@ -109,6 +118,7 @@
                     </div>
                 @endif
             </div>
+            <!-- Tempat untuk slot konten -->
             {{ $slot }}
         </main>
     </div>

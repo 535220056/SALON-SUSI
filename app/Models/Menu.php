@@ -11,6 +11,7 @@ class Menu extends Model
 
     protected $fillable = ['name', 'price', 'description', 'image'];
 
+    // Mendefinisikan relasi banyak ke banyak dengan model Category
     public function categories()
     {
         return $this->belongsToMany(Category::class, 'category_menu');

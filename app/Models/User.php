@@ -18,9 +18,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name',       // Nama pengguna
+        'email',      // Alamat email pengguna
+        'password',   // Kata sandi pengguna
     ];
 
     /**
@@ -29,8 +29,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password',        // Sembunyikan kolom password
+        'remember_token',  // Sembunyikan remember token
     ];
 
     /**
@@ -39,6 +39,6 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'email_verified_at' => 'datetime', // Cast kolom email_verified_at menjadi datetime
     ];
 }

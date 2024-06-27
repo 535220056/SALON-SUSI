@@ -4,14 +4,17 @@
             <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">
                 <div class="flex flex-col md:flex-row">
                     <div class="h-32 md:h-auto md:w-1/2">
+                        <!-- Gambar pada bagian kiri form -->
                         <img class="object-cover w-full h-full"
                             src="https://i.pinimg.com/564x/9d/fe/e7/9dfee77fae8bfb3c77927507002dfe6e.jpg" alt="img" />
                     </div>
                     <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
                         <div class="w-full">
-                            <h3 class="mb-4 text-xl font-bold text-green-800    ">Make Appointment</h3>
+                            <!-- Judul form -->
+                            <h3 class="mb-4 text-xl font-bold text-green-800">Make Appointment</h3>
 
                             <div class="w-full bg-gray-200 rounded-full">
+                                <!-- Langkah 1 dalam proses -->
                                 <div
                                     class="w-40 p-1 text-xs font-medium leading-none text-center text-blue-100 bg-green-800 rounded-full">
                                     Step1</div>
@@ -20,6 +23,7 @@
                             <form method="POST" action="{{ route('reservations.store.step.one') }}">
                                 @csrf
                                 <div class="sm:col-span-6">
+                                    <!-- Input untuk nama depan -->
                                     <label for="first_name" class="block text-sm font-medium text-gray-700"> First Name
                                     </label>
                                     <div class="mt-1">
@@ -32,6 +36,7 @@
                                     @enderror
                                 </div>
                                 <div class="sm:col-span-6">
+                                    <!-- Input untuk nama belakang -->
                                     <label for="last_name" class="block text-sm font-medium text-gray-700"> Last Name
                                     </label>
                                     <div class="mt-1">
@@ -44,6 +49,7 @@
                                     @enderror
                                 </div>
                                 <div class="sm:col-span-6">
+                                    <!-- Input untuk email -->
                                     <label for="email" class="block text-sm font-medium text-gray-700"> Email </label>
                                     <div class="mt-1">
                                         <input type="email" id="email" name="email"
@@ -55,6 +61,7 @@
                                     @enderror
                                 </div>
                                 <div class="sm:col-span-6">
+                                    <!-- Input untuk nomor telepon -->
                                     <label for="tel_number" class="block text-sm font-medium text-gray-700"> Phone
                                         number
                                     </label>
@@ -68,6 +75,7 @@
                                     @enderror
                                 </div>
                                 <div class="sm:col-span-6">
+                                    <!-- Input untuk tanggal reservasi -->
                                     <label for="res_date" class="block text-sm font-medium text-gray-700"> Reservation
                                         Date
                                     </label>
@@ -84,6 +92,7 @@
                                     @enderror
                                 </div>
                                 <div class="sm:col-span-6">
+                                    <!-- Input untuk jumlah tamu -->
                                     <label for="guest_number" class="block text-sm font-medium text-gray-700"> Guest
                                         Number
                                     </label>
@@ -97,6 +106,7 @@
                                     @enderror
                                 </div>
                                 <div class="mt-6 p-4 flex justify-end">
+                                    <!-- Tombol untuk melanjutkan ke langkah berikutnya -->
                                     <button type="submit"
                                         class="px-4 py-2 bg-green-800 hover:bg-indigo-700 rounded-lg text-white">Next</button>
                                 </div>
